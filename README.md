@@ -6,7 +6,7 @@ The best practice for your project is to use a [virtual environment](https://pac
 
 ## Download
 ```
-git clone https://github.com/nimon77/Face-Detection-And-Auto-Crop
+git clone https://github.com/Nimon77/face-auto-crop.git
 ```
 
 ## Python version: 3.11
@@ -15,14 +15,14 @@ You can use pyenv to have multiple python version on your system and make venv w
 ## Installation (with pipenv)
 ```
 pip install --user pipenv
-cd Face-Detection-And-Auto-Crop
+cd face-auto-crop
 pipenv install
 pipenv shell
 ```
 
 ## Installation (with virtualenv)
 ```
-cd Face-Detection-And-Auto-Crop
+cd face-auto-crop
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ## Installation (without virtualenv)
 ```
-cd Face-Detection-And-Auto-Crop
+cd face-auto-crop
 pip install -r requirements.txt
 ```
 
