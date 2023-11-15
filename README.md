@@ -1,5 +1,4 @@
 # Face Detection And Auto Crop
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/leblancfg/autocrop.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/kenxdrgn/Face-Detection-And-Auto-Crop/context:python)  
 A python program that detects all human faces in an image and crops them automatically.
 
 ## Optional
@@ -7,7 +6,18 @@ The best practice for your project is to use a [virtual environment](https://pac
 
 ## Download
 ```
-cd && git clone https://github.com/kenxdrgn/Face-Detection-And-Auto-Crop
+git clone https://github.com/nimon77/Face-Detection-And-Auto-Crop
+```
+
+## Python version: 3.11
+You can use pyenv to have multiple python version on your system and make venv with pipenv
+
+## Installation (with pipenv)
+```
+pip install --user pipenv
+cd Face-Detection-And-Auto-Crop
+pipenv install
+pipenv shell
 ```
 
 ## Installation (with virtualenv)
@@ -26,7 +36,19 @@ pip install -r requirements.txt
 
 ## Usage
 ```
-python auto_crop.py <image_path> ...
+usage: auto_crop.py [-h] [-t THREAD] [-o OUTPUT] image [image ...]
+
+Auto crop faces from images.
+
+positional arguments:
+  image                 image file or directory path
+
+options:
+  -h, --help            show this help message and exit
+  -t THREAD, --thread THREAD
+                        number of threads (default: 1)
+  -o OUTPUT, --output OUTPUT
+                        output directory (default: result)
 ```
 
 ## Example
@@ -37,4 +59,8 @@ or
 ```
 python auto_crop.py image/peoples.jpg data/group.png human.jpeg
 ```
-Successfully cropped images will be saved in a folder named "result".
+or
+```
+python auto_crop.py -t 4 images/
+```
+Successfully cropped images will be saved in a folder named "result" or in the output directory if specified
